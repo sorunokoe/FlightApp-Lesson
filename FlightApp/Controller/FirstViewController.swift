@@ -14,18 +14,18 @@ class FirstViewController: UIViewController {
     
     @IBAction func signInAction(_ sender: Any) {
         
-        
-        if let email = emailField.text, let password = passwordField.text{
-            
-            if !email.isEmpty && !password.isEmpty{
-                
-                
-                performSegue(withIdentifier: "nextBtnSegueId", sender: email)
-                
-                
-            }
-            
-        }
+//        
+//        if let email = emailField.text, let password = passwordField.text{
+//            
+//            if !email.isEmpty && !password.isEmpty{
+//                
+//                
+//                performSegue(withIdentifier: "nextBtnSegueId", sender: email)
+//                
+//                
+//            }
+//            
+//        }
         
         
     }
@@ -33,13 +33,13 @@ class FirstViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier ==  "nextBtnSegueId"{
-            if let destination = segue.destination as? FlightListViewController{
-                if let data = sender as? String{
-                    destination.email = data
-                }
-            }
-        }
+//        if segue.identifier ==  "nextBtnSegueId"{
+//            if let destination = segue.destination as? FlightListViewController{
+//                if let data = sender as? String{
+//                    destination.email = data
+//                }
+//            }
+//        }
         
     }
     

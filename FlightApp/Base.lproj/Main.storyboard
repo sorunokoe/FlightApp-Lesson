@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -55,7 +56,7 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eRO-PZ-E1J">
                                 <rect key="frame" x="117.5" y="429" width="140" height="30"/>
-                                <color key="backgroundColor" red="0.95024091005325317" green="0.41957598924636841" blue="0.19859927892684937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.94901960784313721" green="0.41960784313725491" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="4tK-EE-Roe"/>
                                     <constraint firstAttribute="width" constant="140" id="qey-ei-fhf"/>
@@ -65,6 +66,7 @@
                                 </state>
                                 <connections>
                                     <action selector="signInAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JCa-6O-ubt"/>
+                                    <segue destination="W5x-wK-uPw" kind="show" id="UXz-z8-sk6"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -88,46 +90,162 @@
                     <connections>
                         <outlet property="emailField" destination="N5P-eL-0nA" id="Nlf-IT-hL0"/>
                         <outlet property="passwordField" destination="Yde-Lj-iah" id="S2D-XK-oTF"/>
-                        <segue destination="wKZ-tF-mm2" kind="show" identifier="nextBtnSegueId" id="U2E-oG-5wp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="32.799999999999997" y="32.833583208395808"/>
         </scene>
-        <!--Flight List View Controller-->
-        <scene sceneID="9wS-l3-hQB">
+        <!--Item 2-->
+        <scene sceneID="6I5-F6-rUw">
             <objects>
-                <viewController id="wKZ-tF-mm2" customClass="FlightListViewController" customModule="FlightApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5gJ-HT-ahA">
+                <viewController id="mKA-Dm-2vb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hx8-Vc-xZA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="zLn-dc-bTo"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="gdk-JW-zVR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bt1-tQ-RpY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1837.5999999999999" y="412.44377811094455"/>
+        </scene>
+        <!--Аэропорт-->
+        <scene sceneID="IJe-0Z-Swl">
+            <objects>
+                <viewController id="qzT-db-JhM" customClass="FlightListViewController" customModule="FlightApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1nv-rd-mkK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zUj-l0-cRM">
-                                <rect key="frame" x="30" y="61" width="314" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Поиск аэропортов" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hls-ef-2dq">
+                                <rect key="frame" x="36" y="38" width="303" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="OjS-hj-y4k"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2VR-aq-h1z">
+                                <rect key="frame" x="253" y="76" width="86" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="86" id="BRG-49-73f"/>
+                                    <constraint firstAttribute="height" constant="30" id="crE-cr-ydp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="Изменить"/>
+                                <connections>
+                                    <action selector="editAction:" destination="qzT-db-JhM" eventType="touchUpInside" id="LU0-yC-9qL"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Мои аэропорты" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbT-Jg-Yyc">
+                                <rect key="frame" x="36" y="81" width="141" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="141" id="WE1-QL-PQO"/>
+                                    <constraint firstAttribute="height" constant="21" id="akl-iE-IHl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nts-yT-frx">
+                                <rect key="frame" x="16" y="114" width="343" height="483"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="airportCellId" rowHeight="75" id="7jY-3p-FkJ" customClass="AirportCell" customModule="FlightApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="75"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7jY-3p-FkJ" id="RTr-wx-PaH">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="74.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TSE: Astana Airport" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uH0-H3-S5g">
+                                                    <rect key="frame" x="15" y="17" width="313" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="c9p-p6-rmr"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KZ - Astana" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ck0-5K-be2">
+                                                    <rect key="frame" x="15" y="41" width="313" height="21"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Ck0-5K-be2" firstAttribute="top" secondItem="uH0-H3-S5g" secondAttribute="bottom" constant="3" id="URZ-Kv-aZH"/>
+                                                <constraint firstItem="Ck0-5K-be2" firstAttribute="trailing" secondItem="RTr-wx-PaH" secondAttribute="trailingMargin" id="Y7g-fF-kON"/>
+                                                <constraint firstItem="uH0-H3-S5g" firstAttribute="top" secondItem="RTr-wx-PaH" secondAttribute="topMargin" constant="6" id="Za1-Eg-OHJ"/>
+                                                <constraint firstItem="uH0-H3-S5g" firstAttribute="leading" secondItem="RTr-wx-PaH" secondAttribute="leadingMargin" id="dg6-p4-KWR"/>
+                                                <constraint firstItem="Ck0-5K-be2" firstAttribute="leading" secondItem="RTr-wx-PaH" secondAttribute="leadingMargin" id="nV9-ZQ-k28"/>
+                                                <constraint firstItem="uH0-H3-S5g" firstAttribute="trailing" secondItem="RTr-wx-PaH" secondAttribute="trailingMargin" id="pVY-Lq-OBY"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Ck0-5K-be2" secondAttribute="bottom" constant="2" id="qgO-zX-3ah"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="descLabel" destination="Ck0-5K-be2" id="2sk-2b-Adf"/>
+                                            <outlet property="titleLabel" destination="uH0-H3-S5g" id="bOz-mq-Wgt"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="zUj-l0-cRM" firstAttribute="leading" secondItem="y5B-P7-3W2" secondAttribute="leading" constant="30" id="21o-Mo-RaR"/>
-                            <constraint firstItem="zUj-l0-cRM" firstAttribute="top" secondItem="y5B-P7-3W2" secondAttribute="top" constant="41" id="cJY-Sg-uAl"/>
-                            <constraint firstItem="y5B-P7-3W2" firstAttribute="trailing" secondItem="zUj-l0-cRM" secondAttribute="trailing" constant="31" id="mbn-Vp-pLD"/>
+                            <constraint firstItem="3Sk-sb-nsQ" firstAttribute="bottom" secondItem="nts-yT-frx" secondAttribute="bottom" constant="21" id="1CV-Ms-mCf"/>
+                            <constraint firstItem="3Sk-sb-nsQ" firstAttribute="trailing" secondItem="Hls-ef-2dq" secondAttribute="trailing" constant="36" id="1Ph-8L-74I"/>
+                            <constraint firstItem="3Sk-sb-nsQ" firstAttribute="trailing" secondItem="nts-yT-frx" secondAttribute="trailing" constant="16" id="4pM-ZR-Q7g"/>
+                            <constraint firstItem="Hls-ef-2dq" firstAttribute="leading" secondItem="3Sk-sb-nsQ" secondAttribute="leading" constant="36" id="Dd1-md-WJZ"/>
+                            <constraint firstItem="2VR-aq-h1z" firstAttribute="top" secondItem="Hls-ef-2dq" secondAttribute="bottom" constant="8" id="LXe-uf-pCd"/>
+                            <constraint firstItem="Hls-ef-2dq" firstAttribute="top" secondItem="3Sk-sb-nsQ" secondAttribute="top" constant="18" id="Oms-tV-CPc"/>
+                            <constraint firstItem="pbT-Jg-Yyc" firstAttribute="leading" secondItem="3Sk-sb-nsQ" secondAttribute="leading" constant="36" id="iiX-NR-NJo"/>
+                            <constraint firstItem="nts-yT-frx" firstAttribute="top" secondItem="2VR-aq-h1z" secondAttribute="bottom" constant="8" id="nAM-NJ-80i"/>
+                            <constraint firstItem="3Sk-sb-nsQ" firstAttribute="trailing" secondItem="2VR-aq-h1z" secondAttribute="trailing" constant="36" id="on3-QM-oKi"/>
+                            <constraint firstItem="nts-yT-frx" firstAttribute="leading" secondItem="3Sk-sb-nsQ" secondAttribute="leading" constant="16" id="rlo-IV-JEh"/>
+                            <constraint firstItem="pbT-Jg-Yyc" firstAttribute="top" secondItem="Hls-ef-2dq" secondAttribute="bottom" constant="13" id="xFL-3L-QTo"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="y5B-P7-3W2"/>
+                        <viewLayoutGuide key="safeArea" id="3Sk-sb-nsQ"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Аэропорт" selectedImage="airplane" id="uxn-6H-fH6">
+                        <color key="badgeColor" red="0.94901960780000005" green="0.41960784309999999" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
                     <connections>
-                        <outlet property="emailField" destination="zUj-l0-cRM" id="8Ge-cJ-R4I"/>
+                        <outlet property="airportTableView" destination="nts-yT-frx" id="XqJ-bt-wzC"/>
+                        <outlet property="searchField" destination="Hls-ef-2dq" id="bUD-UW-J62"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tC3-Xa-XMQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oVg-tJ-wWY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="832.79999999999995" y="32.833583208395808"/>
+            <point key="canvasLocation" x="1837.5999999999999" y="-301.79910044977515"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="3e6-Pj-PIM">
+            <objects>
+                <tabBarController id="W5x-wK-uPw" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HmQ-lg-7Qb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="qzT-db-JhM" kind="relationship" relationship="viewControllers" id="JZV-Lk-IY8"/>
+                        <segue destination="mKA-Dm-2vb" kind="relationship" relationship="viewControllers" id="4rN-J7-f2a"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Ue-cO-yaL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="846" y="33"/>
         </scene>
     </scenes>
     <resources>
+        <image name="airplane" width="32" height="32"/>
         <image name="balloon" width="128" height="128"/>
     </resources>
+    <color key="tintColor" red="0.94901960780000005" green="0.41960784309999999" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

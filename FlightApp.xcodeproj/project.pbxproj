@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9946D1FF20DB73CC0049BCCA /* Airport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9946D1FE20DB73CC0049BCCA /* Airport.swift */; };
+		9946D20220DB78140049BCCA /* AirportCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9946D20120DB78140049BCCA /* AirportCell.swift */; };
 		9964DB0420D5583D000BD272 /* FlightListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9964DB0220D5583D000BD272 /* FlightListViewController.swift */; };
 		99736FC920D5475B00B50710 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99736FC820D5475B00B50710 /* AppDelegate.swift */; };
 		99736FCB20D5475B00B50710 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99736FCA20D5475B00B50710 /* FirstViewController.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9946D1FE20DB73CC0049BCCA /* Airport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Airport.swift; sourceTree = "<group>"; };
+		9946D20120DB78140049BCCA /* AirportCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportCell.swift; sourceTree = "<group>"; };
 		9964DB0220D5583D000BD272 /* FlightListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightListViewController.swift; sourceTree = "<group>"; };
 		99736FC520D5475B00B50710 /* FlightApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlightApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99736FC820D5475B00B50710 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +44,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9946D1FD20DB73B70049BCCA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9946D1FE20DB73CC0049BCCA /* Airport.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9946D20020DB77EE0049BCCA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9946D20120DB78140049BCCA /* AirportCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		9964DB0120D557B6000BD272 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +89,8 @@
 		99736FC720D5475B00B50710 /* FlightApp */ = {
 			isa = PBXGroup;
 			children = (
+				9946D20020DB77EE0049BCCA /* View */,
+				9946D1FD20DB73B70049BCCA /* Model */,
 				9964DB0120D557B6000BD272 /* Controller */,
 				99736FC820D5475B00B50710 /* AppDelegate.swift */,
 				99736FCC20D5475B00B50710 /* Main.storyboard */,
@@ -164,7 +186,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				99736FCB20D5475B00B50710 /* FirstViewController.swift in Sources */,
+				9946D1FF20DB73CC0049BCCA /* Airport.swift in Sources */,
 				99736FC920D5475B00B50710 /* AppDelegate.swift in Sources */,
+				9946D20220DB78140049BCCA /* AirportCell.swift in Sources */,
 				9964DB0420D5583D000BD272 /* FlightListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
