@@ -32,16 +32,32 @@ class FlightListViewController: UIViewController, UITableViewDelegate, UITableVi
 // MARK: - Data load
 extension FlightListViewController{
     func getAirports(){
-        airports = [Airport]()
-        let a1 = Airport(title: "ALA: ALMATY Airport", description: "KZ - ALMATY")
-        let a2 = Airport(title: "ABC: ABC Airport", description: "ABC - ABCBC")
-        let a3 = Airport(title: "NEW: NEW York Airport", description: "USA - NEW YORK")
-        let a4 = Airport(title: "LON: LONDON Airport", description: "EN - LONGON")
-        let a5 = Airport(title: "PAR: PARIS Airport", description: "FR - PARIS")
-        guard airports != nil else {return}
-        [a1,a2,a3,a4,a5].forEach{
-            airports!.append($0)
+//        airports = [Airport]()
+//        let a1 = Airport(title: "ALA: ALMATY Airport", description: "KZ - ALMATY")
+//        let a2 = Airport(title: "ABC: ABC Airport", description: "ABC - ABCBC")
+//        let a3 = Airport(title: "NEW: NEW York Airport", description: "USA - NEW YORK")
+//        let a4 = Airport(title: "LON: LONDON Airport", description: "EN - LONGON")
+//        let a5 = Airport(title: "PAR: PARIS Airport", description: "FR - PARIS")
+//        guard airports != nil else {return}
+//        [a1,a2,a3,a4,a5].forEach{
+//            airports!.append($0)
+//        }
+        
+        AirportManager.getAirports { (data, error) in
+            
+            if let error = error{
+                print(error)
+            }
+            
+            if let data = data{
+                if data.isEmpty{
+                    self.airports = data
+                    self.airportTableView.reloadData()
+                }
+            }
+            
         }
+        
     }
 }
 
